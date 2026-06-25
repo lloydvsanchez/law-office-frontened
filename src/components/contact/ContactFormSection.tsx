@@ -246,7 +246,7 @@ const ContactFormSection: React.FC = () => {
             </Field>
 
             <div className="pt-2">
-              <CtaButton variant="primary" onClick={handleSubmit}>
+              <CtaButton variant="primary" onClick={() => handleSubmit}>
                 Send Inquiry
               </CtaButton>
             </div>
