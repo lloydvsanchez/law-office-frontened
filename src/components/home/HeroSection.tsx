@@ -7,6 +7,7 @@ import GoldRule from "../ui/GoldRule";
 import CtaButton from "../ui/CtaButton";
 import ImagePlaceholder from "../ui/ImagePlaceholder";
 import SectionEyebrow from "../ui/SectionEyebrow";
+import CONTACTS from "../../constants/contacts"
 
 const HeroSection: React.FC = () => (
   <section className="relative bg-[#F5F0E8] overflow-hidden hero-grain hero-left-rule">
@@ -34,10 +35,10 @@ const HeroSection: React.FC = () => (
         </p>
 
         <div className="flex flex-wrap gap-3">
-          <CtaButton href="#contact" variant="primary">
+          <CtaButton href={`mailto:${CONTACTS.email}`} variant="primary">
             Schedule a Consultation
           </CtaButton>
-          <CtaButton href="#contact" variant="outline">
+          <CtaButton href="/contact#contact" variant="outline">
             Contact Us
           </CtaButton>
         </div>

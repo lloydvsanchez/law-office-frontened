@@ -55,7 +55,7 @@ const ComingUpdatesSection: React.FC = () => (
 
       {/* Placeholder for future email capture */}
       {/* SWAP: replace this note with an email subscription form component */}
-      <div className="inline-block border border-dashed border-[#C9A84C] px-8 py-5 bg-[#E8D5A3] bg-opacity-40">
+      <div className="hidden border border-dashed border-[#C9A84C] px-8 py-5 bg-[#E8D5A3] bg-opacity-40">
         <p className="font-sans text-[10px] font-semibold uppercase tracking-widest text-[#A8872E] mb-1">
           Email Subscription Form — Coming Soon
         </p>

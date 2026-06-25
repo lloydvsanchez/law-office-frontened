@@ -11,12 +11,20 @@ export default defineConfig([
     files: ['**/*.{ts,tsx}'],
     extends: [
       js.configs.recommended,
-      tseslint.configs.recommended,
-      reactHooks.configs.flat.recommended,
+      ...tseslint.configs.recommended,
       reactRefresh.configs.vite,
     ],
+    // 1. Explicitly register the hooks plugin
+    plugins: {
+      'react-hooks': reactHooks,
+    },
     languageOptions: {
       globals: globals.browser,
+    },
+    // 2. Explicitly map the recommended hook rules safely
+    rules: {
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
     },
   },
 ])

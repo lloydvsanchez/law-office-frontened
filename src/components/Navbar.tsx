@@ -5,6 +5,7 @@
 
 import React, { useState } from "react";
 import CtaButton from "./ui/CtaButton";
+import CONTACTS from "../constants/contacts"
 
 const NAV_LINKS = [
   { label: "Services", href: "/services" },
@@ -50,7 +51,7 @@ const Navbar: React.FC = () => {
 
         {/* ── Desktop CTA ── */}
         <div className="hidden md:block">
-          <CtaButton href="#contact" variant="primary">
+          <CtaButton href={`mailto:${CONTACTS.email}`} variant="primary">
             Schedule Consultation
           </CtaButton>
         </div>
@@ -89,7 +90,7 @@ const Navbar: React.FC = () => {
               {label}
             </a>
           ))}
-          <CtaButton href="#contact" variant="primary" className="mt-2 text-center">
+          <CtaButton href={`mailto:${CONTACTS.email}`} className="mt-2 text-center">
             Schedule Consultation
           </CtaButton>
         </div>

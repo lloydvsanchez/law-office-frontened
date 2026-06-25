@@ -5,6 +5,7 @@
 import React from "react";
 import GoldRule from "../ui/GoldRule";
 import SectionEyebrow from "../ui/SectionEyebrow";
+import CONTACTS from "../../constants/contacts";
 
 // ── Channel data ──────────────────────────────────────────────────────────────
 interface Channel {
@@ -27,9 +28,9 @@ const IconViber = () => (
   </svg>
 );
 
-const IconInstagram = () => (
+const IconWhatsup = () => (
   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.503-5.714-1.458L0 24zm6.59-3.483l.406.241a9.942 9.942 0 0 0 5.011 1.366c5.513 0 10.003-4.48 10.006-9.987.001-2.667-1.036-5.176-2.92-7.062C17.245 3.192 14.74 2.155 12.01 2.155c-5.52 0-10.01 4.483-10.014 9.99a9.917 9.917 0 0 0 1.516 5.261l.264.42-.994 3.63 3.71-.973z" />
   </svg>
 );
 
@@ -43,25 +44,33 @@ const CHANNELS: Channel[] = [
   {
     label: "Facebook Messenger",
     description: "Quick messaging",
-    href: "#", // TODO: replace with https://m.me/your-page
+    href: CONTACTS.messenger,
     icon: <IconMessenger />,
   },
   {
     label: "Viber",
     description: "Direct communication",
-    href: "#", // TODO: replace with viber://chat?number=+63XXXXXXXXXX
+    href: CONTACTS.viber,
     icon: <IconViber />,
   },
+  {
+    label: "Whatsup",
+    description: "General inquiries",
+    href: CONTACTS.whatsup,
+    icon: <IconWhatsup />,
+  },
+  /*
   {
     label: "Instagram",
     description: "General inquiries",
     href: "#", // TODO: replace with https://instagram.com/your-handle
     icon: <IconInstagram />,
   },
+  */
   {
     label: "Email",
     description: "Formal concerns and documents",
-    href: "mailto:contact@lsanchezlaw.com", // TODO: replace with real email
+    href: `mailto:${CONTACTS.email}`,
     icon: <IconEmail />,
   },
 ];

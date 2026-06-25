@@ -58,27 +58,18 @@ const CONSULTATION_MODES = [
 const MapPlaceholder: React.FC = () => (
   <div
     className="w-full aspect-[4/3] flex flex-col items-center justify-center gap-3
-      bg-[#E8D5A3] border-2 border-dashed border-[#C9A84C]"
+      bg-[#E8D5A3] border-2 border-[#C9A84C]"
     role="img"
     aria-label="Google Maps embed placeholder"
   >
-    <svg
-      className="w-10 h-10 text-[#A8872E] opacity-50"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      aria-hidden="true"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-    </svg>
-    <p className="font-sans text-[10px] font-semibold uppercase tracking-widest text-[#A8872E] text-center px-4">
-      Google Maps Embed
-    </p>
-    <p className="font-sans text-[10px] text-[#A8872E] opacity-60 text-center px-6">
-      Replace with Google Maps iframe — see comment in ConsultationLocationSection.tsx
-    </p>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d981.3831504696785!2d123.8976912383424!3d10.299192608674181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a999da5b24a8ff%3A0xde12b435f2122de4!2sL.%20Sanchez%20Law%20Office!5e0!3m2!1sen!2sph!4v1782362209530!5m2!1sen!2sph" 
+      className="w-full h-full" 
+      style={{ border: 0 }} 
+      allowFullScreen 
+      loading="lazy" 
+      referrerPolicy="strict-origin-when-cross-origin"
+    ></iframe>
   </div>
 );
 

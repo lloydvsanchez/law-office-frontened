@@ -5,12 +5,8 @@
 import React from "react";
 import GoldRule from "../ui/GoldRule";
 import SectionEyebrow from "../ui/SectionEyebrow";
-
-// ── Config — update contact details here ──────────────────────────────────────
-const CONTACT = {
-  email: "contact@lsanchezlaw.com",  // TODO: replace with real email
-  phone: "+63",                       // TODO: replace with real number
-};
+import { Link } from "react-router-dom";
+import CONTACTS from "../../constants/contacts"
 
 const CtaBanner: React.FC = () => (
   <section id="contact" className="relative bg-[#1A1A1A] py-16 md:py-24 overflow-hidden">
@@ -40,22 +36,22 @@ const CtaBanner: React.FC = () => (
 
       <div className="flex flex-wrap justify-center gap-4">
         <a
-          href={`mailto:${CONTACT.email}`}
+          href={`mailto:${CONTACTS.email}`}
           className="inline-block font-sans text-sm font-medium tracking-wide uppercase
             px-7 py-3 bg-[#C9A84C] text-white hover:bg-[#A8872E] transition-colors duration-200
             focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A84C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1A1A1A]"
         >
           Schedule a Consultation
         </a>
-        <a
-          href={`tel:${CONTACT.phone}`}
+        <Link
+          to="/contact#contact"
           className="inline-block font-sans text-sm font-medium tracking-wide uppercase
             px-7 py-3 border border-[#C9A84C] text-[#C9A84C]
             hover:bg-[#C9A84C] hover:text-white transition-colors duration-200
             focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A84C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1A1A1A]"
         >
           Contact Us
-        </a>
+        </Link>
       </div>
 
     </div>

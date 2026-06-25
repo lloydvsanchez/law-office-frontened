@@ -5,7 +5,7 @@
 
 import React from "react";
 
-export const SERVICE_ANCHORS = [
+const SERVICE_ANCHORS = [
   { label: "Litigation",      href: "#litigation"    },
   { label: "Property",        href: "#property"      },
   { label: "Business",        href: "#business"      },

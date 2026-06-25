@@ -6,7 +6,8 @@
 //   POST /api/v1/inquiries
 //   body: { name, contact, concern, dates, location, preferred_contact, message }
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import GoldRule from "../ui/GoldRule";
 import SectionEyebrow from "../ui/SectionEyebrow";
 import CtaButton from "../ui/CtaButton";
@@ -94,9 +95,24 @@ const ContactFormSection: React.FC = () => {
       alert("Could not reach the backend server. Is it awake?");
     }
   };
+  
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    // Case 1: If there is a hash (e.g., #contact), find the element and scroll to it
+    if (hash) {
+      const element = document.getElementById(hash.replace("#", ""));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Case 2: If there is no hash, just scroll to the top of the new page
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
 
   return (
-    <section className="bg-white py-16 md:py-24">
+    <section className="bg-white py-16 md:py-24" id="contact">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
 
         {/* Left: intro copy */}

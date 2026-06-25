@@ -12,9 +12,6 @@
 
 import React from "react";
 
-// Layout (shared)
-import CtaBanner from "../components/home/CtaBanner";
-
 // Services-specific sections
 import ServicesHero        from "../components/services/ServicesHero";
 import ServicesAnchorNav   from "../components/services/ServicesAnchorNav";
@@ -29,7 +26,6 @@ const Services: React.FC = () => (
       <ServicesHero />
       <ServicesListSection />
       <ConsultationSection />
-      <CtaBanner />
     </main>
   </>
 );

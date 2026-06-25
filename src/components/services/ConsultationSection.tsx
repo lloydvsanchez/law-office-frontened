@@ -7,6 +7,7 @@ import React from "react";
 import GoldRule from "../ui/GoldRule";
 import SectionEyebrow from "../ui/SectionEyebrow";
 import CtaButton from "../ui/CtaButton";
+import CONTACTS from "../../constants/contacts"
 
 const ConsultationSection: React.FC = () => (
   <section id="consultation" className="bg-[#1A1A1A] py-16 md:py-24 scroll-mt-32">
@@ -34,10 +35,10 @@ const ConsultationSection: React.FC = () => (
       </p>
 
       <div className="flex flex-wrap justify-center gap-4">
-        <CtaButton href="#contact" variant="primary">
+        <CtaButton href={`mailto:${CONTACTS.email}`} variant="primary">
           Schedule a Consultation
         </CtaButton>
-        <CtaButton href="#contact" variant="outline">
+        <CtaButton href="/contact#contact" variant="outline">
           Contact Us
         </CtaButton>
       </div>
